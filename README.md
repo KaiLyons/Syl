@@ -6,7 +6,7 @@ File extention: `.syl`
 ### Hello world
 ```
 int _main():
-    print << ("hello world");
+    print("hello world");
     return 0;
 ```
 ----
