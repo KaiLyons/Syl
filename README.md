@@ -1,4 +1,4 @@
-# Syl Grammar
+# Syl
 ## Basics
 File extention: `.syl`
 
