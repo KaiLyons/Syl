@@ -7,19 +7,24 @@ def read():
     e = contents.strip()
     egg = e.startswith("int _main()")
     if(egg):
-        eg = e.split(":")[1]
+        eg = e.split(":" + "\n")[1]
+        er = eg.startswith(" ")
         egg2 = e.endswith(";")
-        egr = eg.strip()
         y = e.split("print")[1]
-        r = y.split("\")")[0]
+        r = y.split("\");")[0]
         g = r.split("(\"")[1]
         def prfn():
-            if(egr.startswith("print")):
+            if(er):
                 if(y):
-                    if(y.startswith("(")):
+                    if(g):
                         print(g)
                     else:
                         print("failed to find string area")
+                else:
+                    print("failed to find string area")
+            else:
+                print("no indent found after new line")
+
         if(egg2):
             prfn()
         else:
