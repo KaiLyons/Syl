@@ -1,5 +1,10 @@
 file = input("File name: ")
 print("")
+if (file.endswith(".syl")):
+    pass
+else: 
+    print("Wrong file type")
+    exit()
 app = open(file,"r")
 contents = app.read()
 
